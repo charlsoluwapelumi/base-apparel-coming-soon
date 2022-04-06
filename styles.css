@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --White-Linear-One: hsl(0, 0%, 100%);
+    --White-Linear-Two: hsl(0, 100%, 98%);
+    --Red-Linear-One: hsl(0, 80%, 86%);
+    --Red-Linear-Two: hsl(0, 74%, 74%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(135deg, var(--White-Linear-One), var(--White-Linear-Two));
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--Desaturated-Red);
+}
+
+span {
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: var(--Dark-Grayish-Red);
+    font-size: 60px;
+    margin: 80px 0 20px;
+    line-height: 1.1;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.image {
+    background-image: url("./images/hero-desktop.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 60%;
+}
+
+.container {
+    display: flex;
+}
+
+.content-container {
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-position: center center;
+    padding: 40px 120px;
+    width: 100%;
+}
+
+.content {
+    width: 400px;
+    position: relative;
+}
+
+.logo {
+    margin: 30px 0;
+}
+
+.hero-mobile {
+    display: none;
+}
+
+input {
+    background-color: transparent;
+    width: 100%;
+    height: 55px;
+    padding: 12px 25px;
+    margin: 30px 0 10px;
+    border: 1px solid var(--Desaturated-Red);
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+input:focus {
+    border: 2px solid var(--Soft-Red);
+    outline: none;
+}
+
+::placeholder {
+    color: var(--Desaturated-Red);
+}
+
+.error {
+    position: absolute;
+    right: 120px;
+    bottom: 40px;
+    visibility: hidden;
+}
+
+.button {
+    background-image: linear-gradient(135deg, var(--Red-Linear-One), var(--Red-Linear-Two));
+    height: 55px;
+    width: 100px;
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 27px;
+    right: 0px;
+    cursor: pointer;
+    box-shadow: 2px 5px 10px hsl(0, 6%, 24%, 0.5);
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+small {
+    margin: 0 25px 0;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 550px) {
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    p {
+        text-align: center;
+        padding: 0 80px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .container {
+        margin: 0 0 20px;
+    }
+
+    .logo {
+        padding: 0 0 0 40px;
+    }
+
+    .hero-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .content-container {
+        padding: 0;
+    }
+
+    .content {
+        width: 500px;
+    }
+
+    input {
+        margin: 30px 50px 10px;
+        width: 80%;
+    }
+
+    .error {
+        right: 160px;
+        bottom: 40px;
+    }
+    
+    .button {
+        bottom: 27px;
+        right: 50px;
+    }
+
+    small {
+        margin: 0 75px;
+    }
+}
